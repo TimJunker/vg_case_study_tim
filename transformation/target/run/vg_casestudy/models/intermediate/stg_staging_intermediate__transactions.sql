@@ -18,7 +18,10 @@ filtered as (
         account_id,
         transaction_type,
         transaction_amount,
-        transaction_currency
+        case 
+            when transaction_currency = 'RON1' then 'RON'
+            else transaction_currency
+        end as transaction_currency
     from staging
     where not has_date_parsing_error
 )

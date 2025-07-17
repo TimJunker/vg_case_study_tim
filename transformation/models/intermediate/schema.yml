@@ -172,6 +172,10 @@ models:
       - name: transaction_currency
         data_type: varchar
         description: "Currency of transaction with trimmed whitespace"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["AUD", "BGN", "CHF", "CZK", "DKK", "GBP", "HUF", "ISK", "JPY", "NOK", "PLN", "RON", "SEK", "TRY"]
   - name: stg_staging_intermediate__currencies
     description: "Cleaned currency lkp table with proper trimmed text"
     config:
