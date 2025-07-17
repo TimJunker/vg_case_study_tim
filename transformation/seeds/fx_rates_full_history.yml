@@ -1,0 +1,22 @@
+version: 2
+
+seeds:
+  - name: fx_rates_full_history
+    description: "Historical daily foreign exchange rates from Frankfurter.app, 
+      covering all supported currencies converted from EUR. 
+      Rates are returned only on business days when FX markets operate. 
+      The dataset includes fallback values for holidays (e.g. Jan 1 uses Dec 31 rate)."
+    columns:
+      - name: currency_iso_code
+        description: "ISO code for the currency"
+        tests:
+          - not_null
+      - name: fx_rate_date
+        description: "Date when this exchange rate was recorded or last available"
+        tests:
+          - not_null
+      - name: fx_rate
+        description: "Number of units of the given currency equal to 1 EUR on that date.
+          Used for converting transaction amounts into EUR."
+        tests:
+          - not_null

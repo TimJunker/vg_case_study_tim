@@ -187,3 +187,27 @@ models:
           - not_null
           - unique
         description: "ISO code for the currency with trimmed whitespace"
+  - name: stg_staging_intermediate_fx_rates_filled
+    description: "Cleaned and forward-filled daily FX rates by currency between 2024-12-31 and 2025-03-10"
+    config:
+      materialized: table
+      schema: intermediate
+    columns:
+      - name: currency_iso_code 
+        data_type: varchar
+        tests:
+          - not_null
+        description: "ISO code for the currency with trimmed whitespace"
+      - name: fx_rate_date 
+        data_type: date
+        tests:
+          - not_null
+        description: "Calendar date for which the FX rate applies"
+      - name: fx_rate
+        data_type: float
+        description: "Exchange rate converted from German number format"
+        tests:
+          - not_null
+          - numeric_range:
+              min: 0
+

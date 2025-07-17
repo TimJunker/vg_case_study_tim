@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "casestudy"."raw"."fx_rates_full_history" ("currency_iso_code" text,"fx_rate_date" date,"fx_rate" float8)
+  ;
+    -- dbt seed --
+    
+          COPY "casestudy"."raw"."fx_rates_full_history" FROM '/workspaces/vg_case_study_tim/transformation/seeds/fx_rates_full_history.csv' (FORMAT CSV, HEADER TRUE)
+        
+
+;
+  
