@@ -20,6 +20,6 @@ print("✅ Sample Query Result:")
 print(df)
 
 # Export to CSV
-output_path = "explore/exports/fx_rates_sample_export.csv"
+output_path = "data_ingestion/exports/fx_rates_sample_export.csv"
 df.to_csv(output_path, index=False)
 print(f"📁 Exported CSV to: {output_path}")

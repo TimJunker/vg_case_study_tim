@@ -1,3 +1,4 @@
 dbt-duckdb==1.6.2
 pandas
 requests
+datetime
