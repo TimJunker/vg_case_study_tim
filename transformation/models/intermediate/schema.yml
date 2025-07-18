@@ -191,7 +191,7 @@ models:
           - not_null
           - unique
         description: "ISO code for the currency with trimmed whitespace"
-  - name: stg_staging_intermediate_fx_rates_filled
+  - name: intermediate__fx_rates_filled
     description: "Cleaned and forward-filled daily FX rates by currency between 2024-12-31 and 2025-03-10"
     config:
       materialized: table
@@ -214,4 +214,22 @@ models:
           - not_null
           - numeric_range:
               min: 0
+  - name: intermediate__branch_names
+    description: "Branch name lookup table enriched from seed data"
+    config:
+      materialized: table
+      schema: intermediate
+    columns:
+      - name: branch_id
+        data_type: integer
+        description: "Unique identifier for the branch"
+        tests:
+          - not_null
+          - unique
+      - name: branch_name
+        data_type: varchar
+        description: "Formatted branch name associated with the branch_id"
+        tests:
+          - not_null
+
 

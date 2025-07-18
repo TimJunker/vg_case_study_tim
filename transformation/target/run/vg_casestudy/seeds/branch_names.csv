@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "casestudy"."raw"."branch_names" ("branch_id" integer,"branch_name" text)
+  ;
+    -- dbt seed --
+    
+          COPY "casestudy"."raw"."branch_names" FROM '/workspaces/vg_case_study_tim/transformation/seeds/branch_names.csv' (FORMAT CSV, HEADER TRUE)
+        
+
+;
+  

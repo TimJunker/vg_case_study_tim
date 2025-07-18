@@ -1,0 +1,18 @@
+version: 2
+
+seeds:
+  - name: branch_names
+    description: "Static lookup table assigning each branch ID to an international city name. 
+      Used to enrich models with human-readable branch names for reporting and analysis."
+    columns:
+      - name: branch_id
+        description: "Unique identifier for the branch"
+        data_type: integer
+        tests:
+          - not_null
+          - unique
+      - name: branch_name
+        description: "International city name representing the location of the branch"
+        data_type: varchar
+        tests:
+          - not_null

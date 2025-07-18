@@ -5,7 +5,7 @@ with transactions as (
 
 fx_rates_filled as (
     select *
-    from {{ ref('stg_staging_intermediate_fx_rates_filled') }}
+    from {{ ref('intermediate__fx_rates_filled') }}
 ),
 
 joined as (

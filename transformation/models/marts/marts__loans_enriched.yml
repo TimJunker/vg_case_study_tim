@@ -1,0 +1,94 @@
+version: 2
+
+models:
+  - name: marts__loans_enriched
+    description: "Combines loan records with enriched customer and branch details. Each record includes loan, customer demographics, account metadata, and branch name"
+    config:
+      materialized: view
+      schema: marts
+    columns:
+      - name: loan_id
+        description: "Unique identifier of the loan"
+        data_type: integer
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "Unique identifier for the customer"
+        data_type: integer
+        tests:
+          - not_null
+          - unique
+      - name: firstname
+        description: "Customer's first name"
+        data_type: varchar
+      - name: lastname
+        description: "Customer's last name"
+        data_type: varchar
+      - name: age
+        description: "Customer's age in years"
+        data_type: integer
+      - name: branch_id
+        description: "ID of the branch associated with the customer"
+        data_type: integer
+      - name: branch_name
+        description: "Formatted branch name associated with the branch_id"
+        data_type: varchar
+      - name: account_id
+        description: "ID of the account held by the customer (nullable)"
+        data_type: integer
+      - name: account_type
+        description: "Type of account, such as savings or checking"
+        data_type: varchar
+      - name: account_opening_date
+        description: "Date the customer's account was opened"
+        data_type: date
+      - name: has_account
+        description: "Boolean flag indicating whether the customer has an account"
+        data_type: boolean
+        tests:
+          - not_null
+      - name: loan_type
+        description: "Type of the loan (personal, auto, mortgage)"
+        data_type: varchar
+        tests:
+          - not_null
+      - name: loan_amount
+        description: "Principal amount of the loan"
+        data_type: float
+        tests:
+          - not_null
+          - numeric_range:
+              min: 0
+      - name: interest_rate
+        description: "Annual interest rate of the loan"
+        data_type: float
+        tests:
+          - not_null
+          - numeric_range:
+              min: 0
+      - name: loan_term
+        data_type: integer
+        description: "Term of the loan in months"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [12, 24, 36, 48, 60]
+      - name: loan_status
+        description: "Status of the loan: approved, rejected, or closed"
+        data_type: varchar
+        tests:
+          - not_null
+      - name: approval_rejection_date
+        data_type: date
+        description: "Date when loan was approved or rejected, properly parsed"
+        tests:
+          - not_null
+          - date_is_past
+
+
+
+
+
+
+

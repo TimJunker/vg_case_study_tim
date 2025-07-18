@@ -1,32 +1,31 @@
 version: 2
 
 models:
-  - name: core__transactions_with_euro
+  - name: marts__transactions_with_euro
     description: "Transaction data enriched with FX conversion to EUR using daily exchange rates"
     config:
       materialized: view
-      schema: main
+      schema: marts
     columns:
       - name: transaction_id
         description: "Unique identifier for the transaction"
+        data_type: integer
         tests:
           - not_null
           - unique
-
       - name: transaction_date
         description: "Date when the transaction took place"
         data_type: date
         tests:
           - not_null
-
       - name: account_id
         description: "Identifier of the account associated with the transaction"
+        data_type: integer
         tests:
           - not_null
-
       - name: transaction_type
         description: "Type of transaction: deposit, withdrawal, or transfer"
-
+        data_type: varchar
       - name: transaction_amount
         description: "Original transaction amount in source currency"
         data_type: float
@@ -34,13 +33,12 @@ models:
           - not_null
           - numeric_range:
               min: 0
-
       - name: transaction_currency
         description: "ISO code of the transaction currency"
-
+        data_type: varchar
       - name: fx_rate
         description: "FX rate to EUR on transaction date"
-
+        data_type: float
       - name: transaction_amount_euro
         description: "Transaction amount converted to EUR using the FX rate"
         data_type: float

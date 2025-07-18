@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: marts__customers_enriched
+    description: "Customers enriched with their account information and a flag indicating whether an account exists"
+    config:
+      materialized: view
+      schema: marts
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer"
+        data_type: integer
+        tests:
+          - not_null
+          - unique
+      - name: firstname
+        description: "Customer's first name"
+        data_type: varchar
+      - name: lastname
+        description: "Customer's last name"
+        data_type: varchar
+      - name: age
+        description: "Customer's age in years"
+        data_type: integer
+      - name: branch_id
+        description: "ID of the branch associated with the customer"
+        data_type: integer
+      - name: branch_name
+        description: "Formatted branch name associated with the branch_id"
+        data_type: varchar
+      - name: account_id
+        description: "ID of the account held by the customer (nullable)"
+        data_type: integer
+      - name: account_type
+        description: "Type of account, such as savings or checking"
+        data_type: varchar
+      - name: account_opening_date
+        description: "Date the customer's account was opened"
+        data_type: date
+      - name: has_account
+        description: "Boolean flag indicating whether the customer has an account"
+        data_type: boolean
+        tests:
+          - not_null

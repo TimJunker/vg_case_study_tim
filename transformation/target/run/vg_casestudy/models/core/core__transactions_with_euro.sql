@@ -1,6 +1,6 @@
 
   
-  create view "casestudy"."main"."core__transactions_with_euro__dbt_tmp" as (
+  create view "casestudy"."core"."core__transactions_with_euro__dbt_tmp" as (
     with transactions as (
     select *
     from "casestudy"."intermediate"."stg_staging_intermediate__transactions"
