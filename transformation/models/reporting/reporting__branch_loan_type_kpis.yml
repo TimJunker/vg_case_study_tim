@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: reporting__branch_loan_type_kpis
+    description: "Aggregated loan performance KPIs at the branch level. Includes loan counts by status, approval/rejection rates, average loan metrics, and time-based loan approval stats."
+    config:
+      materialized: view
+      schema: reporting
+    columns:
+      - name: branch_id
+        description: "Unique identifier of the branch"
+        data_type: integer
+        tests:
+          - not_null
+      - name: branch_name
+        description: "Name of the branch location"
+        data_type: varchar
+      - name: loan_type
+        description: "Name of the loan type"
+        data_type: varchar
+      - name: count_of_loans
+        description: "Total number of loans associated with the branch"
+        data_type: integer
+      - name: loans_approved
+        description: "Number of loans with status 'approved'"
+        data_type: integer
+      - name: loans_rejected
+        description: "Number of loans with status 'rejected'"
+        data_type: integer
+      - name: loans_closed
+        description: "Number of loans with status 'closed'"
+        data_type: integer
+      - name: unique_customers
+        description: "Number of customers"
+        data_type: integer
+      - name: loans_under_30
+        description: "Number of loans of customers under 30 by loan type"
+        data_type: integer
+      - name: loans_30_to_50
+        description: "Number of loans of customers between 30 and 50 by loan type"
+        data_type: integer
+      - name: loans_over_50
+        description: "Number of loans of customers over 50 by loan type"
+        data_type: integer
+      - name: approval_rate
+        description: "Share of loans approved out of total loans by loan type"
+        data_type: float
+      - name: rejection_rate
+        description: "Share of loans rejected out of total loans by loan type"
+        data_type: float
+      - name: closed_rate
+        description: "Share of loans closed out of total loans by loan type"
+        data_type: float
+      - name: total_loan_amount
+        description: "Total loan amount issued by the branch"
+        data_type: float
+      - name: avg_loan_amount
+        description: "Average loan amount per issued loan by loan type"
+        data_type: float
+      - name: avg_interest_rate
+        description: "Average interest rate across loans by loan type"
+        data_type: float
+      - name: avg_loan_term_months
+        description: "Average loan term in months by loan type"
+        data_type: float
+      - name: long_term_loan_share_more_than_36
+        description: "Share of loans with terms longer than 36 months by loan type"
+        data_type: float
+      - name: short_term_loan_share_less_than_24
+        description: "Share of loans with terms shorter than 24 months by loan type"
+        data_type: float
+      - name: earliest_approval_date
+        description: "Date of the earliest loan approval for the branch by loan type"
+        data_type: date
+      - name: latest_approval_date
+        description: "Date of the most recent loan approval for the branch by loan type"
+        data_type: date
