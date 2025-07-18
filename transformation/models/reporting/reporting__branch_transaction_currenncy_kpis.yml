@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: reporting__branch_transaction_currenncy_kpis
+    description: "Daily transaction performance KPIs per branch per currency, enriched with customer demographic segmentation. Includes transaction types, transaction value metrics, account linkage, and currency usage metrics."
+    config:
+      materialized: view
+      schema: reporting
+    columns:
+      - name: branch_id
+        description: "Unique identifier of the branch"
+        data_type: integer
+      - name: branch_name
+        description: "Name of the branch location"
+        data_type: varchar
+      - name: transaction_date
+        description: "Date of the transaction"
+        data_type: date
+      - name: transaction_currency
+        description: "Name of the currency the transaction is based on"
+        data_type: varchar
+      - name: count_transactions
+        description: "Total number of transactions on the given date at the branch in that currency"
+        data_type: integer
+      - name: count_deposits
+        description: "Number of deposit transactions"
+        data_type: integer
+      - name: count_withdrawals
+        description: "Number of withdrawal transactions"
+        data_type: integer
+      - name: count_transfers
+        description: "Number of transfer transactions"
+        data_type: integer
+      - name: unique_customers
+        description: "Number of distinct customers involved in transactions"
+        data_type: integer
+      - name: transactions_under_30
+        description: "Number of transactions performed by customers under 30"
+        data_type: integer
+      - name: transactions_30_to_50
+        description: "Number of transactions performed by customers aged between 30 and 50"
+        data_type: integer
+      - name: transactions_over_50
+        description: "Number of transactions performed by customers over 50"
+        data_type: integer
+      - name: share_customers_under_30
+        description: "Share of transactions from customers under 30"
+        data_type: float
+      - name: share_customers_30_to_50
+        description: "Share of transactions from customers aged 30 to 50"
+        data_type: float
+      - name: share_customers_over_50
+        description: "Share of transactions from customers over 50"
+        data_type: float
+      - name: total_transaction_amount_euro
+        description: "Total transaction value in euro on the given day by currency"
+        data_type: float
+      - name: avg_transaction_amount_euro
+        description: "Average transaction value in euro by currency"
+        data_type: float
+      - name: transactions_with_account
+        description: "Number of transactions linked to a known account"
+        data_type: integer
+      - name: transactions_without_account
+        description: "Number of transactions not linked to any account"
+        data_type: integer
