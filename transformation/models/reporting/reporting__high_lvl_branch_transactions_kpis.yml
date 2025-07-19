@@ -73,3 +73,6 @@ models:
       - name: transactions_without_account
         description: "Number of transactions not linked to any account"
         data_type: integer
+      - name: transaction_amount_euro_without_account
+        description: "Total transaction value without an account in euro on the given day"
+        data_type: float

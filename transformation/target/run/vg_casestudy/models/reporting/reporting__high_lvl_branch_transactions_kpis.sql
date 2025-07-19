@@ -50,7 +50,8 @@ aggregated as(
         avg(transaction_amount_euro) as avg_transaction_amount_euro,
         count(distinct transaction_currency) as num_transaction_currencies,
         count(case when has_account is true then transaction_id end) as transactions_with_account,
-        count(case when has_account is false then transaction_id end) as transactions_without_account
+        count(case when has_account is false then transaction_id end) as transactions_without_account,
+        sum(case when has_account is false then transaction_amount_euro else 0 end) as transaction_amount_euro_without_account
 
     from joined
     group by branch_id, branch_name, transaction_date
