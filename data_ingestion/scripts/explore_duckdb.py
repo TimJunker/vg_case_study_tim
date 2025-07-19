@@ -8,7 +8,7 @@ con = duckdb.connect('transformation/casestudy.duckdb')
 query = """
     select 
         *
-    from intermediate.intermediate__fx_rates_filled
+    from reporting.reporting__high_lvl_branch_transactions_kpis
 
 """
 
@@ -20,6 +20,6 @@ print("✅ Sample Query Result:")
 print(df)
 
 # Export to CSV
-output_path = "data_ingestion/exports/intermediate__fx_rates_filled.csv"
+output_path = "data_ingestion/exports/reporting__high_lvl_branch_transactions_kpis.csv"
 df.to_csv(output_path, index=False)
 print(f"📁 Exported CSV to: {output_path}")
