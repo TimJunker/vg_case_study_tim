@@ -25,7 +25,7 @@ aggregated as (
         count(distinct case when age between 30 and 50 then customer_id end)::float / count(distinct customer_id) as share_customers_30_to_50,
         count(distinct case when age > 50 then customer_id end)::float / count(distinct customer_id) as share_customers_over_50,
         avg(case when account_opening_date is not null then date_diff('day', account_opening_date, current_date)::float / 365 end) as avg_account_age_years,
-        avg(case when account_opening_date is not null then account_opening_date end) as avg_account_opening_date
+        avg(case when account_opening_date is not null then account_opening_date end)::date as avg_account_opening_date
 
 
     from customers

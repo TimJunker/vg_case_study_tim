@@ -34,7 +34,6 @@ aggregated as(
         count(case when transaction_type = 'transfer' then transaction_id end)::float / count(transaction_id) as share_transfers,
 
         --customer segmentation
-        count(distinct customer_id) as unique_customers,
         count(case when age < 30 then transaction_id end) as transactions_under_30,
         count(case when age between 30 and 50 then transaction_id end) as transactions_30_to_50,
         count(case when age > 50 then transaction_id end) as transactions_over_50,
