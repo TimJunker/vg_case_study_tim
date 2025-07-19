@@ -27,6 +27,15 @@ models:
       - name: loans_closed
         description: "Number of loans with status 'closed'"
         data_type: integer
+      - name: approval_rate
+        description: "Share of loans approved out of total loans"
+        data_type: float
+      - name: rejection_rate
+        description: "Share of loans rejected out of total loans"
+        data_type: float
+      - name: closed_rate
+        description: "Share of loans closed out of total loans"
+        data_type: float
       - name: loans_personal
         description: "Number of loans of type personal"
         data_type: integer
@@ -36,9 +45,15 @@ models:
       - name: loans_auto
         description: "Number of loans of type auto"
         data_type: integer
-      - name: unique_customers
-        description: "Number of customers"
-        data_type: integer
+      - name: loans_personal_rate
+        description: "Share of personal loans out of total loans"
+        data_type: float
+      - name: loans_mortgage_rate
+        description: "Share of mortgage loans out of total loans"
+        data_type: float
+      - name: loans_auto_rate
+        description: "Share of auto loans out of total loans"
+        data_type: float
       - name: loans_under_30
         description: "Number of loans of customers under 30"
         data_type: integer
@@ -48,14 +63,14 @@ models:
       - name: loans_over_50
         description: "Number of loans of customers over 50"
         data_type: integer
-      - name: approval_rate
-        description: "Share of loans approved out of total loans"
+      - name: loans_under_30_rate
+        description: "Share of loans of customers under 30"
         data_type: float
-      - name: rejection_rate
-        description: "Share of loans rejected out of total loans"
+      - name: loans_30_to_50_rate
+        description: "Share of loans of customers between 30 and 50"
         data_type: float
-      - name: closed_rate
-        description: "Share of loans closed out of total loans"
+      - name: loans_over_50_rate
+        description: "Share of loans of customers over 50"
         data_type: float
       - name: total_loan_amount
         description: "Total loan amount issued by the branch"

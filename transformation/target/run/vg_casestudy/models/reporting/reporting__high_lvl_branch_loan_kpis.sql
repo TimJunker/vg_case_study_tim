@@ -16,25 +16,34 @@ aggregated as (
         count(case when loan_status = 'approved' then loan_id end) as loans_approved,
         count(case when loan_status = 'rejected' then loan_id end) as loans_rejected,
         count(case when loan_status = 'closed' then loan_id end) as loans_closed,
+        count(case when loan_status = 'approved' then loan_id end)::float
+            / count(loan_id) as approval_rate,
+        count(case when loan_status = 'rejected' then loan_id end)::float
+            / count(loan_id) as rejection_rate,
+        count(case when loan_status = 'closed' then loan_id end)::float
+            / count(loan_id) as closed_rate,
 
         -- loan count by type
         count(case when loan_type = 'personal' then loan_id end) as loans_personal,
         count(case when loan_type = 'mortgage' then loan_id end) as loans_mortgage,
         count(case when loan_type = 'auto' then loan_id end) as loans_auto,
+        count(case when loan_type = 'personal'then loan_id end)::float
+            / count(loan_id) as loans_personal_rate,
+        count(case when loan_type = 'mortgage' then loan_id end)::float
+            / count(loan_id) as loans_mortgage_rate,
+        count(case when loan_type = 'auto' then loan_id end)::float
+            / count(loan_id) as loans_auto_rate,
 
         --customer segmentation
-        count(distinct customer_id) as unique_customers,
         count(case when age < 30 then loan_id end) as loans_under_30,
         count(case when age between 30 and 50 then loan_id end) as loans_30_to_50,
         count(case when age > 50 then loan_id end) as loans_over_50,
-
-        -- approval rate
-        count(case when loan_status = 'approved' then loan_id end)::float
-            / nullif(count(loan_id), 0) as approval_rate,
-        count(case when loan_status = 'rejected' then loan_id end)::float
-            / nullif(count(loan_id), 0) as rejection_rate,
-        count(case when loan_status = 'closed' then loan_id end)::float
-            / nullif(count(loan_id), 0) as closed_rate,
+        count(case when age < 30 then loan_id end)::float
+            / count(loan_id) as loans_under_30_rate,
+        count(case when age between 30 and 50 then loan_id end)::float
+            / count(loan_id) as loans_30_to_50_rate,
+        count(case when age > 50 then loan_id end)::float
+            / count(loan_id) as loans_over_50_rate,
 
         -- loan kpis
         sum(loan_amount) as total_loan_amount,
