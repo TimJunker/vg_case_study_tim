@@ -29,6 +29,9 @@ aggregated as(
         count(case when transaction_type = 'deposit' then transaction_id end) as count_deposits,
         count(case when transaction_type = 'withdrawal' then transaction_id end) as count_withdrawals,
         count(case when transaction_type = 'transfer' then transaction_id end) as count_transfers,
+        count(case when transaction_type = 'deposit' then transaction_id end)::float / count(transaction_id) as share_deposits,
+        count(case when transaction_type = 'withdrawal' then transaction_id end)::float / count(transaction_id) as share_withdrawals,
+        count(case when transaction_type = 'transfer' then transaction_id end)::float / count(transaction_id) as share_transfers,
 
         --customer segmentation
         count(distinct customer_id) as unique_customers,
@@ -44,7 +47,7 @@ aggregated as(
         avg(transaction_amount_euro) as avg_transaction_amount_euro,
         count(distinct transaction_currency) as num_transaction_currencies,
         count(case when has_account is true then transaction_id end) as transactions_with_account,
-        count(case when has_account is false then transaction_id end) as transactions_without_account
+        count(case when branch_id is null then transaction_id end) as transactions_without_account
 
     from joined
     group by branch_id, branch_name, transaction_date

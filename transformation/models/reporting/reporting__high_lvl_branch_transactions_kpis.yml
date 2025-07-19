@@ -28,6 +28,15 @@ models:
       - name: count_transfers
         description: "Number of transfer transactions"
         data_type: integer
+      - name: share_deposits
+        description: "Share of transactions type deposit"
+        data_type: float
+      - name: share_withdrawals
+        description: "Share of transactions type withdrawals"
+        data_type: float
+      - name: share_transfers
+        description: "Share of transactions type transfers"
+        data_type: float
       - name: unique_customers
         description: "Number of distinct customers involved in transactions"
         data_type: integer
