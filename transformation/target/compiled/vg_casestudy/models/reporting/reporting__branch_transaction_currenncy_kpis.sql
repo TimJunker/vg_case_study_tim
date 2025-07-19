@@ -14,7 +14,7 @@ joined as (
         customers.*
     from transactions 
     left join customers 
-    on transactions.account_id = customers.account_id
+    on transactions.account_id = customers.customer_id
 ),
 
 aggregated as(
@@ -46,7 +46,7 @@ aggregated as(
         sum(transaction_amount_euro) as total_transaction_amount_euro,
         avg(transaction_amount_euro) as avg_transaction_amount_euro,
         count(case when has_account is true then transaction_id end) as transactions_with_account,
-        count(case when branch_id is null then transaction_id end) as transactions_without_account
+        count(case when has_account is false then transaction_id end) as transactions_without_account
 
     from joined
     group by branch_id, branch_name, transaction_date, transaction_currency
