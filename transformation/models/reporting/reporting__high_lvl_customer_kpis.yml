@@ -58,4 +58,10 @@ models:
       - name: share_customers_over_50
         description: "Proportion of customers over 50 years old"
         data_type: float
+      - name: avg_account_age_years
+        description: "Average age of all accounts held by customers in the branch, in years"
+        data_type: float
+      - name: Average account opening date of all accounts in the branch
+        description: "Proportion of customers over 50 years old"
+        data_type: date
 

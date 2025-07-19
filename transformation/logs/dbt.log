@@ -27193,3 +27193,591 @@ There are 1 unused configuration paths:
 [0m14:19:30.146555 [debug] [MainThread]: Command `dbt test` succeeded at 14:19:30.146387 after 0.36 seconds
 [0m14:19:30.146980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15a97f5f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15a97f4a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15a9671cd0>]}
 [0m14:19:30.147383 [debug] [MainThread]: Flushing usage events
+[0m14:56:38.605749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c8850510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c83fc950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c83ebb10>]}
+
+
+============================== 14:56:38.611420 | b6c7861e-fc33-48cc-aba9-0250ef9dbc8d ==============================
+[0m14:56:38.611420 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:56:38.612066 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/workspaces/vg_case_study_tim/transformation', 'log_path': '/workspaces/vg_case_study_tim/transformation/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --select reporting__high_lvl_customer_kpis', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:56:38.789341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6c7861e-fc33-48cc-aba9-0250ef9dbc8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c80a7bd0>]}
+[0m14:56:38.804400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b6c7861e-fc33-48cc-aba9-0250ef9dbc8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c86f7d90>]}
+[0m14:56:38.806218 [info ] [MainThread]: Registered adapter: duckdb=1.6.2
+[0m14:56:38.837535 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:56:38.954112 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 6 files changed.
+[0m14:56:38.955159 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/reporting/reporting__high_lvl_customer_kpis.yml
+[0m14:56:38.955758 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/reporting/reporting__high_lvl_branch_transactions_kpis.yml
+[0m14:56:38.956303 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/reporting/reporting__branch_transaction_currenncy_kpis.yml
+[0m14:56:38.956624 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/reporting/reporting__high_lvl_branch_transactions_kpis.sql
+[0m14:56:38.956921 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/reporting/reporting__branch_transaction_currenncy_kpis.sql
+[0m14:56:38.957229 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/reporting/reporting__high_lvl_customer_kpis.sql
+[0m14:56:39.106092 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.vg_casestudy.main
+[0m14:56:39.116583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b6c7861e-fc33-48cc-aba9-0250ef9dbc8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c3f18e10>]}
+[0m14:56:39.161945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b6c7861e-fc33-48cc-aba9-0250ef9dbc8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c9236710>]}
+[0m14:56:39.162576 [info ] [MainThread]: Found 21 models, 1 analysis, 4 seeds, 114 tests, 5 sources, 0 exposures, 0 metrics, 632 macros, 0 groups, 0 semantic models
+[0m14:56:39.163045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6c7861e-fc33-48cc-aba9-0250ef9dbc8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c8282590>]}
+[0m14:56:39.166332 [info ] [MainThread]: 
+[0m14:56:39.167196 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:56:39.168420 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_casestudy'
+[0m14:56:39.184670 [debug] [ThreadPool]: Using duckdb connection "list_casestudy"
+[0m14:56:39.185152 [debug] [ThreadPool]: On list_casestudy: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"casestudy"'
+    
+  
+  
+[0m14:56:39.185492 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:56:39.332137 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.334032 [debug] [ThreadPool]: On list_casestudy: Close
+[0m14:56:39.339116 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy, now create_casestudy_reporting)
+[0m14:56:39.339913 [debug] [ThreadPool]: Creating schema "database: "casestudy"
+schema: "reporting"
+"
+[0m14:56:39.344788 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_reporting"
+[0m14:56:39.345237 [debug] [ThreadPool]: On create_casestudy_reporting: BEGIN
+[0m14:56:39.345598 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:56:39.357710 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.358433 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_reporting"
+[0m14:56:39.358904 [debug] [ThreadPool]: On create_casestudy_reporting: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_reporting"} */
+create schema if not exists "casestudy"."reporting"
+[0m14:56:39.359779 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.361022 [debug] [ThreadPool]: On create_casestudy_reporting: COMMIT
+[0m14:56:39.361478 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_reporting"
+[0m14:56:39.361869 [debug] [ThreadPool]: On create_casestudy_reporting: COMMIT
+[0m14:56:39.362783 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.363179 [debug] [ThreadPool]: On create_casestudy_reporting: Close
+[0m14:56:39.370294 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_casestudy_reporting, now list_casestudy_marts)
+[0m14:56:39.375809 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_marts"
+[0m14:56:39.376539 [debug] [ThreadPool]: On list_casestudy_marts: BEGIN
+[0m14:56:39.376818 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:56:39.390028 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.390447 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_marts"
+[0m14:56:39.390926 [debug] [ThreadPool]: On list_casestudy_marts: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_marts"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'marts'
+    and table_catalog = 'casestudy'
+  
+[0m14:56:39.408788 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.411191 [debug] [ThreadPool]: On list_casestudy_marts: ROLLBACK
+[0m14:56:39.412697 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_marts'
+[0m14:56:39.413177 [debug] [ThreadPool]: On list_casestudy_marts: Close
+[0m14:56:39.416266 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_marts, now list_casestudy_raw)
+[0m14:56:39.419060 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m14:56:39.419368 [debug] [ThreadPool]: On list_casestudy_raw: BEGIN
+[0m14:56:39.419651 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:56:39.432903 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.433320 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m14:56:39.433639 [debug] [ThreadPool]: On list_casestudy_raw: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_raw"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'raw'
+    and table_catalog = 'casestudy'
+  
+[0m14:56:39.442758 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.444351 [debug] [ThreadPool]: On list_casestudy_raw: ROLLBACK
+[0m14:56:39.445019 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_raw'
+[0m14:56:39.445372 [debug] [ThreadPool]: On list_casestudy_raw: Close
+[0m14:56:39.448667 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_raw, now list_casestudy_intermediate)
+[0m14:56:39.452072 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m14:56:39.452396 [debug] [ThreadPool]: On list_casestudy_intermediate: BEGIN
+[0m14:56:39.452666 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:56:39.464795 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.465279 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m14:56:39.465573 [debug] [ThreadPool]: On list_casestudy_intermediate: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_intermediate"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'intermediate'
+    and table_catalog = 'casestudy'
+  
+[0m14:56:39.474356 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.476122 [debug] [ThreadPool]: On list_casestudy_intermediate: ROLLBACK
+[0m14:56:39.476684 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_intermediate'
+[0m14:56:39.476986 [debug] [ThreadPool]: On list_casestudy_intermediate: Close
+[0m14:56:39.480291 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_intermediate, now list_casestudy_staging)
+[0m14:56:39.482546 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m14:56:39.482896 [debug] [ThreadPool]: On list_casestudy_staging: BEGIN
+[0m14:56:39.483203 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:56:39.496361 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.496793 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m14:56:39.497119 [debug] [ThreadPool]: On list_casestudy_staging: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_staging"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'staging'
+    and table_catalog = 'casestudy'
+  
+[0m14:56:39.506265 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.507984 [debug] [ThreadPool]: On list_casestudy_staging: ROLLBACK
+[0m14:56:39.508847 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_staging'
+[0m14:56:39.509319 [debug] [ThreadPool]: On list_casestudy_staging: Close
+[0m14:56:39.512901 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_staging, now list_casestudy_reporting)
+[0m14:56:39.515082 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_reporting"
+[0m14:56:39.515433 [debug] [ThreadPool]: On list_casestudy_reporting: BEGIN
+[0m14:56:39.516632 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:56:39.528872 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.529286 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_reporting"
+[0m14:56:39.529602 [debug] [ThreadPool]: On list_casestudy_reporting: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_reporting"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'reporting'
+    and table_catalog = 'casestudy'
+  
+[0m14:56:39.538615 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:56:39.540527 [debug] [ThreadPool]: On list_casestudy_reporting: ROLLBACK
+[0m14:56:39.541255 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_reporting'
+[0m14:56:39.541595 [debug] [ThreadPool]: On list_casestudy_reporting: Close
+[0m14:56:39.545801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6c7861e-fc33-48cc-aba9-0250ef9dbc8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c8875bd0>]}
+[0m14:56:39.546334 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:56:39.546648 [debug] [MainThread]: On master: BEGIN
+[0m14:56:39.546936 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:56:39.561329 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:56:39.561789 [debug] [MainThread]: On master: COMMIT
+[0m14:56:39.562100 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:56:39.562370 [debug] [MainThread]: On master: COMMIT
+[0m14:56:39.562909 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:56:39.563238 [debug] [MainThread]: On master: Close
+[0m14:56:39.566029 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:56:39.566493 [info ] [MainThread]: 
+[0m14:56:39.572384 [debug] [Thread-1 (]: Began running node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:56:39.572943 [info ] [Thread-1 (]: 1 of 1 START sql view model reporting.reporting__high_lvl_customer_kpis ........ [RUN]
+[0m14:56:39.573739 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.vg_casestudy.reporting__high_lvl_customer_kpis'
+[0m14:56:39.574246 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:56:39.585600 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:56:39.587204 [debug] [Thread-1 (]: Timing info for model.vg_casestudy.reporting__high_lvl_customer_kpis (compile): 14:56:39.574611 => 14:56:39.586665
+[0m14:56:39.587971 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:56:39.625187 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:56:39.626505 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:56:39.627147 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: BEGIN
+[0m14:56:39.627534 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:56:39.643874 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m14:56:39.644625 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:56:39.645221 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.reporting__high_lvl_customer_kpis"} */
+
+  
+  create view "casestudy"."reporting"."reporting__high_lvl_customer_kpis__dbt_tmp" as (
+    with customers as (
+    select *
+    from "casestudy"."marts"."marts__customers_enriched"
+),
+
+aggregated as (
+    select
+        branch_id,
+        branch_name,
+        count(distinct customer_id) as unique_customers,
+        count(distinct case when has_account is false then customer_id end) as customers_without_account,
+
+        count(case when account_type = 'current' then customer_id end) as customers_with_account_type_current,
+        count(case when account_type = 'savings' then customer_id end) as customers_with_account_type_savings,
+        count(case when account_type = 'current' then account_id end)::float / nullif(count(account_id), 0) as share_current_accounts,
+        count(case when account_type = 'savings' then account_id end)::float / nullif(count(account_id), 0) as share_savings_accounts,
+
+        avg(age) as avg_customer_age,
+        min(age) as min_customer_age,
+        max(age) as max_customer_age,
+        count(distinct case when age < 30 then customer_id end) as customers_under_30,
+        count(distinct case when age between 30 and 50 then customer_id end) as customers_30_to_50,
+        count(distinct case when age > 50 then customer_id end) as customers_over_50,
+        count(distinct case when age < 30 then customer_id end)::float / count(distinct customer_id) as share_customers_under_30,
+        count(distinct case when age between 30 and 50 then customer_id end)::float / count(distinct customer_id) as share_customers_30_to_50,
+        count(distinct case when age > 50 then customer_id end)::float / count(distinct customer_id) as share_customers_over_50,
+        avg(case when account_opening_date is not null then date_diff('day', account_opening_date, current_date)::float / 365  as avg_account_age_years,
+        avg(case when account_opening_date is not null then account_opening_date) as avg_account_opening_date
+
+
+    from customers
+    group by branch_id, branch_name
+)
+
+select *
+from aggregated
+  );
+
+[0m14:56:39.656893 [debug] [Thread-1 (]: Timing info for model.vg_casestudy.reporting__high_lvl_customer_kpis (execute): 14:56:39.588503 => 14:56:39.656611
+[0m14:56:39.657444 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: ROLLBACK
+[0m14:56:39.665781 [debug] [Thread-1 (]: Failed to rollback 'model.vg_casestudy.reporting__high_lvl_customer_kpis'
+[0m14:56:39.666261 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: Close
+[0m14:56:39.670538 [debug] [Thread-1 (]: Runtime Error in model reporting__high_lvl_customer_kpis (models/reporting/reporting__high_lvl_customer_kpis.sql)
+  Parser Error: syntax error at or near "as"
+[0m14:56:39.671087 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b6c7861e-fc33-48cc-aba9-0250ef9dbc8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c80c3810>]}
+[0m14:56:39.671675 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model reporting.reporting__high_lvl_customer_kpis  [[31mERROR[0m in 0.10s]
+[0m14:56:39.672243 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:56:39.674719 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:56:39.675309 [debug] [MainThread]: On master: BEGIN
+[0m14:56:39.675686 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:56:39.691060 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:56:39.691690 [debug] [MainThread]: On master: COMMIT
+[0m14:56:39.692086 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:56:39.692508 [debug] [MainThread]: On master: COMMIT
+[0m14:56:39.693594 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:56:39.694189 [debug] [MainThread]: On master: Close
+[0m14:56:39.697750 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:56:39.698252 [debug] [MainThread]: Connection 'list_casestudy_reporting' was properly closed.
+[0m14:56:39.698572 [debug] [MainThread]: Connection 'model.vg_casestudy.reporting__high_lvl_customer_kpis' was properly closed.
+[0m14:56:39.699046 [info ] [MainThread]: 
+[0m14:56:39.699750 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.53 seconds (0.53s).
+[0m14:56:39.700685 [debug] [MainThread]: Command end result
+[0m14:56:39.726754 [info ] [MainThread]: 
+[0m14:56:39.727510 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m14:56:39.728116 [info ] [MainThread]: 
+[0m14:56:39.728664 [error] [MainThread]:   Runtime Error in model reporting__high_lvl_customer_kpis (models/reporting/reporting__high_lvl_customer_kpis.sql)
+  Parser Error: syntax error at or near "as"
+[0m14:56:39.729202 [info ] [MainThread]: 
+[0m14:56:39.729716 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m14:56:39.730414 [debug] [MainThread]: Command `dbt run` failed at 14:56:39.730271 after 1.13 seconds
+[0m14:56:39.730947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c8266dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c8266310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7c8867750>]}
+[0m14:56:39.731495 [debug] [MainThread]: Flushing usage events
+[0m14:57:02.466909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272ba0f810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272d4c4a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272ba0fb10>]}
+
+
+============================== 14:57:02.469535 | 0b3bfd03-6766-4925-b7a0-ea621ac5f178 ==============================
+[0m14:57:02.469535 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:57:02.470149 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/workspaces/vg_case_study_tim/transformation/logs', 'profiles_dir': '/workspaces/vg_case_study_tim/transformation', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select reporting__high_lvl_customer_kpis', 'send_anonymous_usage_stats': 'True'}
+[0m14:57:02.574820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b3bfd03-6766-4925-b7a0-ea621ac5f178', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272b6d3d10>]}
+[0m14:57:02.590249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b3bfd03-6766-4925-b7a0-ea621ac5f178', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272b6f14d0>]}
+[0m14:57:02.591070 [info ] [MainThread]: Registered adapter: duckdb=1.6.2
+[0m14:57:02.620663 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:57:02.673420 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:57:02.674371 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/reporting/reporting__high_lvl_customer_kpis.sql
+[0m14:57:02.801578 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.vg_casestudy.main
+[0m14:57:02.810156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b3bfd03-6766-4925-b7a0-ea621ac5f178', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2727545ad0>]}
+[0m14:57:02.847937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b3bfd03-6766-4925-b7a0-ea621ac5f178', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f27273b7610>]}
+[0m14:57:02.848543 [info ] [MainThread]: Found 21 models, 1 analysis, 4 seeds, 114 tests, 5 sources, 0 exposures, 0 metrics, 632 macros, 0 groups, 0 semantic models
+[0m14:57:02.848958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b3bfd03-6766-4925-b7a0-ea621ac5f178', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272b6b7fd0>]}
+[0m14:57:02.851692 [info ] [MainThread]: 
+[0m14:57:02.852509 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:57:02.853677 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_casestudy'
+[0m14:57:02.868765 [debug] [ThreadPool]: Using duckdb connection "list_casestudy"
+[0m14:57:02.869327 [debug] [ThreadPool]: On list_casestudy: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"casestudy"'
+    
+  
+  
+[0m14:57:02.869694 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:57:02.886814 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.888220 [debug] [ThreadPool]: On list_casestudy: Close
+[0m14:57:02.894889 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy, now create_casestudy_reporting)
+[0m14:57:02.896242 [debug] [ThreadPool]: Creating schema "database: "casestudy"
+schema: "reporting"
+"
+[0m14:57:02.901080 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_reporting"
+[0m14:57:02.901484 [debug] [ThreadPool]: On create_casestudy_reporting: BEGIN
+[0m14:57:02.901779 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:57:02.915703 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.916168 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_reporting"
+[0m14:57:02.916469 [debug] [ThreadPool]: On create_casestudy_reporting: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_reporting"} */
+create schema if not exists "casestudy"."reporting"
+[0m14:57:02.917156 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.918179 [debug] [ThreadPool]: On create_casestudy_reporting: COMMIT
+[0m14:57:02.918494 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_reporting"
+[0m14:57:02.918767 [debug] [ThreadPool]: On create_casestudy_reporting: COMMIT
+[0m14:57:02.919413 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.919754 [debug] [ThreadPool]: On create_casestudy_reporting: Close
+[0m14:57:02.925766 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_casestudy_reporting, now list_casestudy_reporting)
+[0m14:57:02.932066 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_reporting"
+[0m14:57:02.932492 [debug] [ThreadPool]: On list_casestudy_reporting: BEGIN
+[0m14:57:02.932794 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:57:02.944701 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.945178 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_reporting"
+[0m14:57:02.945512 [debug] [ThreadPool]: On list_casestudy_reporting: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_reporting"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'reporting'
+    and table_catalog = 'casestudy'
+  
+[0m14:57:02.955855 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.957472 [debug] [ThreadPool]: On list_casestudy_reporting: ROLLBACK
+[0m14:57:02.958197 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_reporting'
+[0m14:57:02.958477 [debug] [ThreadPool]: On list_casestudy_reporting: Close
+[0m14:57:02.962157 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_reporting, now list_casestudy_intermediate)
+[0m14:57:02.966166 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m14:57:02.966615 [debug] [ThreadPool]: On list_casestudy_intermediate: BEGIN
+[0m14:57:02.966954 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:57:02.979885 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.980341 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m14:57:02.980663 [debug] [ThreadPool]: On list_casestudy_intermediate: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_intermediate"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'intermediate'
+    and table_catalog = 'casestudy'
+  
+[0m14:57:02.990437 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:02.991902 [debug] [ThreadPool]: On list_casestudy_intermediate: ROLLBACK
+[0m14:57:02.992486 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_intermediate'
+[0m14:57:02.992806 [debug] [ThreadPool]: On list_casestudy_intermediate: Close
+[0m14:57:02.997167 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_intermediate, now list_casestudy_raw)
+[0m14:57:03.001467 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m14:57:03.001874 [debug] [ThreadPool]: On list_casestudy_raw: BEGIN
+[0m14:57:03.002174 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:57:03.015004 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:03.015411 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m14:57:03.015832 [debug] [ThreadPool]: On list_casestudy_raw: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_raw"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'raw'
+    and table_catalog = 'casestudy'
+  
+[0m14:57:03.024720 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:03.026329 [debug] [ThreadPool]: On list_casestudy_raw: ROLLBACK
+[0m14:57:03.026877 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_raw'
+[0m14:57:03.027225 [debug] [ThreadPool]: On list_casestudy_raw: Close
+[0m14:57:03.030555 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_raw, now list_casestudy_staging)
+[0m14:57:03.033605 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m14:57:03.035738 [debug] [ThreadPool]: On list_casestudy_staging: BEGIN
+[0m14:57:03.036140 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:57:03.048653 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:03.049100 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m14:57:03.049426 [debug] [ThreadPool]: On list_casestudy_staging: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_staging"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'staging'
+    and table_catalog = 'casestudy'
+  
+[0m14:57:03.058062 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:03.059605 [debug] [ThreadPool]: On list_casestudy_staging: ROLLBACK
+[0m14:57:03.060172 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_staging'
+[0m14:57:03.060477 [debug] [ThreadPool]: On list_casestudy_staging: Close
+[0m14:57:03.064261 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_staging, now list_casestudy_marts)
+[0m14:57:03.066613 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_marts"
+[0m14:57:03.066998 [debug] [ThreadPool]: On list_casestudy_marts: BEGIN
+[0m14:57:03.067384 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:57:03.080436 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:03.080892 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_marts"
+[0m14:57:03.081222 [debug] [ThreadPool]: On list_casestudy_marts: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_marts"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'marts'
+    and table_catalog = 'casestudy'
+  
+[0m14:57:03.090127 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m14:57:03.091420 [debug] [ThreadPool]: On list_casestudy_marts: ROLLBACK
+[0m14:57:03.091880 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_marts'
+[0m14:57:03.092274 [debug] [ThreadPool]: On list_casestudy_marts: Close
+[0m14:57:03.097226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b3bfd03-6766-4925-b7a0-ea621ac5f178', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272743a7d0>]}
+[0m14:57:03.097867 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:57:03.098151 [debug] [MainThread]: On master: BEGIN
+[0m14:57:03.098420 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:57:03.118704 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:57:03.119172 [debug] [MainThread]: On master: COMMIT
+[0m14:57:03.119487 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:57:03.119768 [debug] [MainThread]: On master: COMMIT
+[0m14:57:03.120374 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:57:03.120709 [debug] [MainThread]: On master: Close
+[0m14:57:03.123549 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:57:03.124161 [info ] [MainThread]: 
+[0m14:57:03.127079 [debug] [Thread-1 (]: Began running node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:57:03.127793 [info ] [Thread-1 (]: 1 of 1 START sql view model reporting.reporting__high_lvl_customer_kpis ........ [RUN]
+[0m14:57:03.128802 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.vg_casestudy.reporting__high_lvl_customer_kpis'
+[0m14:57:03.129189 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:57:03.138071 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.139373 [debug] [Thread-1 (]: Timing info for model.vg_casestudy.reporting__high_lvl_customer_kpis (compile): 14:57:03.129450 => 14:57:03.138660
+[0m14:57:03.140498 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:57:03.175440 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.176516 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.177187 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: BEGIN
+[0m14:57:03.177604 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:57:03.195556 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m14:57:03.196119 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.196568 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.reporting__high_lvl_customer_kpis"} */
+
+  
+  create view "casestudy"."reporting"."reporting__high_lvl_customer_kpis__dbt_tmp" as (
+    with customers as (
+    select *
+    from "casestudy"."marts"."marts__customers_enriched"
+),
+
+aggregated as (
+    select
+        branch_id,
+        branch_name,
+        count(distinct customer_id) as unique_customers,
+        count(distinct case when has_account is false then customer_id end) as customers_without_account,
+
+        count(case when account_type = 'current' then customer_id end) as customers_with_account_type_current,
+        count(case when account_type = 'savings' then customer_id end) as customers_with_account_type_savings,
+        count(case when account_type = 'current' then account_id end)::float / nullif(count(account_id), 0) as share_current_accounts,
+        count(case when account_type = 'savings' then account_id end)::float / nullif(count(account_id), 0) as share_savings_accounts,
+
+        avg(age) as avg_customer_age,
+        min(age) as min_customer_age,
+        max(age) as max_customer_age,
+        count(distinct case when age < 30 then customer_id end) as customers_under_30,
+        count(distinct case when age between 30 and 50 then customer_id end) as customers_30_to_50,
+        count(distinct case when age > 50 then customer_id end) as customers_over_50,
+        count(distinct case when age < 30 then customer_id end)::float / count(distinct customer_id) as share_customers_under_30,
+        count(distinct case when age between 30 and 50 then customer_id end)::float / count(distinct customer_id) as share_customers_30_to_50,
+        count(distinct case when age > 50 then customer_id end)::float / count(distinct customer_id) as share_customers_over_50,
+        avg(case when account_opening_date is not null then date_diff('day', account_opening_date, current_date)::float / 365 end) as avg_account_age_years,
+        avg(case when account_opening_date is not null then account_opening_date end) as avg_account_opening_date
+
+
+    from customers
+    group by branch_id, branch_name
+)
+
+select *
+from aggregated
+  );
+
+[0m14:57:03.202570 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m14:57:03.209235 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.209742 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.reporting__high_lvl_customer_kpis"} */
+alter view "casestudy"."reporting"."reporting__high_lvl_customer_kpis" rename to "reporting__high_lvl_customer_kpis__dbt_backup"
+[0m14:57:03.210967 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m14:57:03.214216 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.214681 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.reporting__high_lvl_customer_kpis"} */
+alter view "casestudy"."reporting"."reporting__high_lvl_customer_kpis__dbt_tmp" rename to "reporting__high_lvl_customer_kpis"
+[0m14:57:03.215761 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m14:57:03.236085 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: COMMIT
+[0m14:57:03.236578 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.236907 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: COMMIT
+[0m14:57:03.243508 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m14:57:03.249423 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.reporting__high_lvl_customer_kpis"
+[0m14:57:03.249906 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: /* {"app": "dbt", "dbt_version": "1.6.18", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.reporting__high_lvl_customer_kpis"} */
+drop view if exists "casestudy"."reporting"."reporting__high_lvl_customer_kpis__dbt_backup" cascade
+[0m14:57:03.253595 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m14:57:03.255106 [debug] [Thread-1 (]: Timing info for model.vg_casestudy.reporting__high_lvl_customer_kpis (execute): 14:57:03.140964 => 14:57:03.254943
+[0m14:57:03.255490 [debug] [Thread-1 (]: On model.vg_casestudy.reporting__high_lvl_customer_kpis: Close
+[0m14:57:03.294750 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0b3bfd03-6766-4925-b7a0-ea621ac5f178', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f27272e9950>]}
+[0m14:57:03.295542 [info ] [Thread-1 (]: 1 of 1 OK created sql view model reporting.reporting__high_lvl_customer_kpis ... [[32mOK[0m in 0.17s]
+[0m14:57:03.296166 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.reporting__high_lvl_customer_kpis
+[0m14:57:03.298383 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:57:03.298803 [debug] [MainThread]: On master: BEGIN
+[0m14:57:03.299106 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:57:03.314258 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:57:03.315202 [debug] [MainThread]: On master: COMMIT
+[0m14:57:03.316539 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:57:03.317240 [debug] [MainThread]: On master: COMMIT
+[0m14:57:03.318793 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m14:57:03.319553 [debug] [MainThread]: On master: Close
+[0m14:57:03.322681 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:57:03.323218 [debug] [MainThread]: Connection 'list_casestudy_marts' was properly closed.
+[0m14:57:03.323558 [debug] [MainThread]: Connection 'model.vg_casestudy.reporting__high_lvl_customer_kpis' was properly closed.
+[0m14:57:03.323943 [info ] [MainThread]: 
+[0m14:57:03.324323 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.47 seconds (0.47s).
+[0m14:57:03.324981 [debug] [MainThread]: Command end result
+[0m14:57:03.350438 [info ] [MainThread]: 
+[0m14:57:03.351214 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:57:03.351595 [info ] [MainThread]: 
+[0m14:57:03.351995 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:57:03.352578 [debug] [MainThread]: Command `dbt run` succeeded at 14:57:03.352453 after 0.89 seconds
+[0m14:57:03.352947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272b6abbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f27302c2590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f272d1be990>]}
+[0m14:57:03.353363 [debug] [MainThread]: Flushing usage events
+[0m14:57:18.806538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c62790490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c6263f2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c6259bc50>]}
+
+
+============================== 14:57:18.809150 | 910a96de-9f4d-4481-8945-9f69dda63dc1 ==============================
+[0m14:57:18.809150 [info ] [MainThread]: Running with dbt=1.6.18
+[0m14:57:18.809973 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/workspaces/vg_case_study_tim/transformation/logs', 'profiles_dir': '/workspaces/vg_case_study_tim/transformation', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt test --select reporting__high_lvl_customer_kpis', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:57:18.910742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '910a96de-9f4d-4481-8945-9f69dda63dc1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c5eace4d0>]}
+[0m14:57:18.924932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '910a96de-9f4d-4481-8945-9f69dda63dc1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c627a6590>]}
+[0m14:57:18.925717 [info ] [MainThread]: Registered adapter: duckdb=1.6.2
+[0m14:57:18.952373 [debug] [MainThread]: checksum: 7b9fab86a08e9e96a48a825af743c566d95b877e068b8c6d0dbafbf714447189, vars: {}, profile: , target: , version: 1.6.18
+[0m14:57:19.011597 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:57:19.012069 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:57:19.013906 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.vg_casestudy.main
+[0m14:57:19.022547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '910a96de-9f4d-4481-8945-9f69dda63dc1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c62367a90>]}
+[0m14:57:19.108352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '910a96de-9f4d-4481-8945-9f69dda63dc1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c5de38450>]}
+[0m14:57:19.109030 [info ] [MainThread]: Found 21 models, 1 analysis, 4 seeds, 114 tests, 5 sources, 0 exposures, 0 metrics, 632 macros, 0 groups, 0 semantic models
+[0m14:57:19.109526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '910a96de-9f4d-4481-8945-9f69dda63dc1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c5dda2d50>]}
+[0m14:57:19.112890 [info ] [MainThread]: 
+[0m14:57:19.113632 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m14:57:19.114415 [debug] [MainThread]: Command end result
+[0m14:57:19.138206 [debug] [MainThread]: Command `dbt test` succeeded at 14:57:19.138027 after 0.34 seconds
+[0m14:57:19.138603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c66e77450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c66e76310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c66e774d0>]}
+[0m14:57:19.138991 [debug] [MainThread]: Flushing usage events
