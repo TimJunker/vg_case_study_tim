@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: reporting__high_lvl_customer_kpis
+    description: "Branch-level customer metrics to support branch performance monitoring. Includes demographic segmentation."
+    config:
+      materialized: view
+      schema: reporting
+    columns:
+      - name: branch_id
+        description: "Unique identifier of the branch"
+        data_type: integer
+      - name: branch_name
+        description: "Name of the branch"
+        data_type: varchar
+      - name: unique_customers
+        description: "Number of distinct customers associated with the branch"
+        data_type: integer
+      - name: customers_without_account
+        description: "Number of customers in the branch who do not hold any account"
+        data_type: integer
+      - name: customers_with_account_type_current
+        description: "Number of customers who hold a current account"
+        data_type: integer
+      - name: customers_with_account_type_savings
+        description: "Number of customers who hold a savings account"
+        data_type: integer
+      - name: share_current_accounts
+        description: "Share of all accounts in the branch that are current accounts"
+        data_type: float
+      - name: share_savings_accounts
+        description: "Share of all accounts in the branch that are savings accounts"
+        data_type: float
+      - name: avg_customer_age
+        description: "Average age of customers in the branch"
+        data_type: float
+      - name: min_customer_age
+        description: "Age of the youngest customer in the branch"
+        data_type: integer
+      - name: max_customer_age
+        description: "Age of the oldest customer in the branch"
+        data_type: integer
+      - name: customers_under_30
+        description: "Number of customers under 30 years old"
+        data_type: integer
+      - name: customers_30_to_50
+        description: "Number of customers aged between 30 and 50"
+        data_type: integer
+      - name: customers_over_50
+        description: "Number of customers over 50 years old"
+        data_type: integer
+      - name: share_customers_under_30
+        description: "Proportion of customers under 30 years old"
+        data_type: float
+      - name: share_customers_30_to_50
+        description: "Proportion of customers aged between 30 and 50"
+        data_type: float
+      - name: share_customers_over_50
+        description: "Proportion of customers over 50 years old"
+        data_type: float
+
