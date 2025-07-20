@@ -1,8 +1,0 @@
-here you will find the link to the dbt docs generate output:
-
-http://localhost:8080/#!/overview
-
-Otherwise the output is stored in:
-transformation/target/catalog.json
-transformation/target/manifest.json
-transformation/target/index.html

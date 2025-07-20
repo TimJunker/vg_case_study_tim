@@ -4,12 +4,14 @@
 
 To support data exploration and transformation, I created a dedicated data_ingestion folder structured as follows:
 
+```
 ├── data_ingestion/                     # data ingestion folder
 │   ├── exports/                        # Output data for Power BI / Excel
 │   ├── scripts/                        # Python scripts to generate seed and csv files
 │   │   ├── branch_names.py/            # script to create seed file which enriches the branch id with a branch name
 │   │   ├── explore_duckdb.py/          # exports used for data exploration and importing them into excel and power bi 
 │   │   └── fetch_fx_rates_frankfurter/ # script to create seed file which creates an alternative fx_rates table which pulls fx_rates on any given transaction date for the given currencies
+```
 
 ## Rationale
 
