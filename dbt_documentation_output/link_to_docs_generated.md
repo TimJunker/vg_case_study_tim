@@ -6,9 +6,8 @@ transformation/target/index.html
 
 otherwise it should be reachable within the terminal with:
 
-```cd transformation
-```
-followed by
+# Navigate to the dbt project
+cd transformation
 
-```dbt docs serve
-```
+# Show dbt docs generated output
+dbt docs serve
