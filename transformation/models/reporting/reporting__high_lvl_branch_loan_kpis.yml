@@ -2,9 +2,9 @@ version: 2
 
 models:
   - name: reporting__high_lvl_branch_loan_kpis
-    description: "Aggregated loan performance KPIs at the branch level. Includes loan counts by status, approval/rejection rates, average loan metrics, and time-based loan approval stats."
+    description: "Aggregated loan performance KPIs at the branch level. Includes loan counts by status, approval/rejection rates, average loan metrics."
     config:
-      materialized: view
+      materialized: table
       schema: reporting
     columns:
       - name: branch_id
@@ -26,6 +26,15 @@ models:
         data_type: integer
       - name: loans_closed
         description: "Number of loans with status 'closed'"
+        data_type: integer
+      - name: loans_approved_or_closed
+        description: "Number of loans that were either approved or closed. Represents total successful applications"
+        data_type: integer
+      - name: approval_success_rate
+        description: "Share of total applications that were either approved or closed. Measures how many applicants were successful"
+        data_type: integer
+      - name: approval_to_rejection_ratio
+        description: "Ratio of successful applications (approved or closed) to rejected applications. Indicates approval efficiency versus rejections"
         data_type: integer
       - name: approval_rate
         description: "Share of loans approved out of total loans"
@@ -53,6 +62,24 @@ models:
         data_type: float
       - name: loans_auto_rate
         description: "Share of auto loans out of total loans"
+        data_type: float
+      - name: approval_success_rate_personal
+        description: "Share of personal loan applications that were approved or closed. Reflects overall success rate for personal loans."
+        data_type: float
+      - name: approval_to_rejection_ratio_personal
+        description: "Ratio of successful personal loans (approved or closed) to rejected personal loan applications."
+        data_type: float
+      - name: approval_success_rate_mortgage
+        description: "Share of mortgage loan applications that were approved or closed. Reflects overall success rate for mortgage loans."
+        data_type: float
+      - name: approval_to_rejection_ratio_mortgage
+        description: "Ratio of successful mortgage loans (approved or closed) to rejected mortgage loan applications."
+        data_type: float
+      - name: approval_success_rate_auto
+        description: "Share of auto loan applications that were approved or closed. Reflects overall success rate for auto loans."
+        data_type: float
+      - name: approval_to_rejection_ratio_auto
+        description: "Ratio of successful auto loans (approved or closed) to rejected auto loan applications."
         data_type: float
       - name: loans_under_30
         description: "Number of loans of customers under 30"

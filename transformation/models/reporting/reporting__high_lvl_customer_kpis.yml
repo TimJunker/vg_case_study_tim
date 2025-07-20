@@ -4,7 +4,7 @@ models:
   - name: reporting__high_lvl_customer_kpis
     description: "Branch-level customer metrics to support branch performance monitoring. Includes demographic segmentation."
     config:
-      materialized: view
+      materialized: table
       schema: reporting
     columns:
       - name: branch_id

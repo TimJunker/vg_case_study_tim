@@ -13,6 +13,12 @@ aggregated as (
         count(case when loan_status = 'approved' then loan_id end) as loans_approved,
         count(case when loan_status = 'rejected' then loan_id end) as loans_rejected,
         count(case when loan_status = 'closed' then loan_id end) as loans_closed,
+        count(case when loan_status in ('approved', 'closed') then loan_id end) as loans_approved_or_closed,
+        count(case when loan_status in ('approved', 'closed') then loan_id end)::float 
+            / count(loan_id) as approval_success_rate,
+        count(case when loan_status in ('approved', 'closed') then loan_id end)::float 
+            / nullif(count(case when loan_status = 'rejected' then loan_id end), 0) as approval_to_rejection_ratio,
+
         count(case when loan_status = 'approved' then loan_id end)::float
             / count(loan_id) as approval_rate,
         count(case when loan_status = 'rejected' then loan_id end)::float
@@ -20,7 +26,7 @@ aggregated as (
         count(case when loan_status = 'closed' then loan_id end)::float
             / count(loan_id) as closed_rate,
 
-        -- loan count by type
+        -- loan by type
         count(case when loan_type = 'personal' then loan_id end) as loans_personal,
         count(case when loan_type = 'mortgage' then loan_id end) as loans_mortgage,
         count(case when loan_type = 'auto' then loan_id end) as loans_auto,
@@ -30,6 +36,20 @@ aggregated as (
             / count(loan_id) as loans_mortgage_rate,
         count(case when loan_type = 'auto' then loan_id end)::float
             / count(loan_id) as loans_auto_rate,
+        
+        -- loan success by type
+        count(case when loan_type = 'personal' and loan_status in ('approved', 'closed') then loan_id end)::float
+            / nullif(count(case when loan_type = 'personal' then loan_id end), 0) as approval_success_rate_personal,
+        count(case when loan_type = 'personal' and loan_status in ('approved', 'closed') then loan_id end)::float
+            / nullif(count(case when loan_type = 'personal' and loan_status = 'rejected' then loan_id end), 0) as approval_to_rejection_ratio_personal,
+        count(case when loan_type = 'mortgage' and loan_status in ('approved', 'closed') then loan_id end)::float
+            / nullif(count(case when loan_type = 'mortgage' then loan_id end), 0) as approval_success_rate_mortgage,
+        count(case when loan_type = 'mortgage' and loan_status in ('approved', 'closed') then loan_id end)::float
+            / nullif(count(case when loan_type = 'mortgage' and loan_status = 'rejected' then loan_id end), 0) as approval_to_rejection_ratio_mortgage,
+        count(case when loan_type = 'auto' and loan_status in ('approved', 'closed') then loan_id end)::float
+            / nullif(count(case when loan_type = 'auto' then loan_id end), 0) as approval_success_rate_auto,
+        count(case when loan_type = 'auto' and loan_status in ('approved', 'closed') then loan_id end)::float
+            / nullif(count(case when loan_type = 'auto' and loan_status = 'rejected' then loan_id end), 0) as approval_to_rejection_ratio_auto,
 
         --customer segmentation
         count(case when age < 30 then loan_id end) as loans_under_30,

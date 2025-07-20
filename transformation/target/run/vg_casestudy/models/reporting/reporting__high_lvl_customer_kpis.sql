@@ -1,7 +1,13 @@
 
   
-  create view "casestudy"."reporting"."reporting__high_lvl_customer_kpis__dbt_tmp" as (
-    with customers as (
+    
+    
+
+    create  table
+      "casestudy"."reporting"."reporting__high_lvl_customer_kpis__dbt_tmp"
+  
+    as (
+      with customers as (
     select *
     from "casestudy"."marts"."marts__customers_enriched"
 ),
@@ -37,4 +43,6 @@ aggregated as (
 
 select *
 from aggregated
-  );
+    );
+  
+  

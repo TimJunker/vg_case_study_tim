@@ -1,7 +1,13 @@
 
   
-  create view "casestudy"."reporting"."reporting__high_lvl_branch_transactions_kpis__dbt_tmp" as (
-    with transactions as (
+    
+    
+
+    create  table
+      "casestudy"."reporting"."reporting__high_lvl_branch_transactions_kpis__dbt_tmp"
+  
+    as (
+      with transactions as (
     select *
     from "casestudy"."marts"."marts__transactions_with_euro"
 ),
@@ -58,4 +64,6 @@ aggregated as(
 
 select * 
 from aggregated
-  );
+    );
+  
+  

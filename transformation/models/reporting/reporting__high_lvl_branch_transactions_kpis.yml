@@ -4,7 +4,7 @@ models:
   - name: reporting__high_lvl_branch_transactions_kpis
     description: "Daily transaction performance KPIs per branch, enriched with customer demographic segmentation. Includes transaction types, transaction value metrics, account linkage, and currency usage metrics."
     config:
-      materialized: view
+      materialized: table
       schema: reporting
     columns:
       - name: branch_id
